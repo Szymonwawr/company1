@@ -20,14 +20,14 @@ public class EmployeeRepositoryDefault implements EmployeeRepo {
         Employee employee1 = this.get(pesel);
 
 
-if (employee1 != null){
-    throw  new IllegalArgumentException("Pesel already exist" + pesel);
+        if (employee1 != null) {
+            throw new IllegalArgumentException("Pesel already exist" + pesel);
 
-    }
-employeeList.add(employee);
+        }
+        employeeList.add(employee);
 
-System.out.println(employee);
-return employee;
+        System.out.println(employee);
+        return employee;
 
     }
 
@@ -45,18 +45,17 @@ return employee;
     }
 
     @Override
-    public  List<Employee>getAll() {
+    public List<Employee> getAll() {
         return new ArrayList<>(employeeList);
 
 
     }
 
 
-
     @Override
     public boolean delete(String pesel) {
 
-       return employeeList.remove(this.get(pesel));
+        return employeeList.remove(this.get(pesel));
 
 
     }
@@ -68,8 +67,8 @@ return employee;
 
 
         Employee set = this.employeeList.set(index, employee);
-System.out.println(set);
-return set;
+        System.out.println(set);
+        return set;
 
     }
 
@@ -80,7 +79,7 @@ return set;
 
     @Override
     public boolean clear() {
-this.employeeList.clear();
+        this.employeeList.clear();
         return true;
     }
 

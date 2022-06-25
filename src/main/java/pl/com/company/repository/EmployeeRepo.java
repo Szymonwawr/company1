@@ -12,12 +12,14 @@ public interface EmployeeRepo {
 
     Employee get(String pesel);
 
-List<Employee>getAll();
+    List<Employee> getAll();
 
     boolean delete(String pesel);
 
     Employee update(Employee employee);
+
     int size();
-boolean clear ();
+
+    boolean clear();
 
 }
