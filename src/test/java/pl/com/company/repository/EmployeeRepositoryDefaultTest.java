@@ -34,6 +34,7 @@ public class EmployeeRepositoryDefaultTest {
 
     @BeforeEach
     void setUp() {
+
         this.employee = employeeRepo.create(FIRST_NAME_TEST, LAST_NAME_TEST, PESEL_TEST, SALARY_TEST);
     }
 
@@ -59,10 +60,6 @@ public class EmployeeRepositoryDefaultTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             employeeRepo.create(FIRST_NAME_TEST, LAST_NAME_TEST, PESEL_TEST, SALARY_TEST);
         });
-
-
-
-
 
 
     }

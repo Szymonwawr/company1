@@ -6,7 +6,6 @@ import java.util.Objects;
 
 public class Employee {
 
-
     private final LocalDateTime createAt;
     private final LocalDateTime updatedAt;
 
@@ -16,9 +15,8 @@ public class Employee {
     private final String pesel;
     private BigDecimal salary;
 
-    
 
-    public Employee(String firstName, String lastName, String pesel, BigDecimal salary ) {
+    public Employee(String firstName, String lastName, String pesel, BigDecimal salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
@@ -27,9 +25,6 @@ public class Employee {
         this.createAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
     }
-
-
-
 
 
     public Employee expected(String firstNameTest2, String lastNameTest2, BigDecimal salaryTest2, String peselTest) {
